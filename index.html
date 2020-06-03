@@ -6,31 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Webcams and IoT!</title>
-  <style>
-    #canvas {
-      width: 50%;
-      margin: 10px auto;
-      display: block;
-      /* display: none; */
-    }
-
-    #video {
-      width: 50%;
-      display: block;
-      margin: auto;
-    }
-
-    #button-row {
-      margin: auto;
-      display: flex;
-      justify-content: center;
-    }
-
-    button {    
-      margin: 10px;            
-      width: 140px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
 </head>
@@ -40,76 +16,11 @@
     <button id="blue">Blue</button>
     <button id="green">Green</button>
     <button id="sample">Sample Image</button>
-</div>
+  </div>
   <video id="video" autoplay></video>
   <canvas id="canvas"></canvas>
-  
 
-  <script>
-    const blue = {r: 0, g: 173, b: 238};
-    const green = {r: 140, g: 198, b: 63};
-    const video = document.getElementById("video");
-    const canvas = document.getElementById("canvas");
-    const blueButton = document.getElementById("blue");
-    const greenButton = document.getElementById("green");
-    const sampleButton = document.getElementById("sample");
-
-    /**
-     * Activate the user's camera and feed the video into our <video /> element.
-     * @param {HTMLMediaElement} destination The media element to send the camera feed. 
-     */ 
-    function activateCamera(destination) {     
-
-    }
-
-    /**
-     * Renders the source element to a canvas' drawing context.
-     * @param {HTMLCanvasElement} canvasElement The canvas to save the video to.
-     * @param {HTMLVideoElement} videoElement The video to render to the canvas.
-     */
-    function renderVideo(canvasElement, videoElement) {    
-     
-    }
-
-    /**
-    * Retrieves the average RGB value from the canvas.
-    * @param {HTMLCanvasElement} canvasElement The canvas element to retrieve the image from.
-    */
-    function getRGBFromCanvas(canvasElement) {
-      
-    }
-
-    /**
-     * Set Background color of body to the rgb value passed in.
-     * @param {Object} rgb An object with r, g, and b property values.
-     */ 
-    function setBackgroundColor(rgb) {
-      
-    }
-
-    /**
-     * Returns the headers needed for the fetch call.
-     * @returns {HeadersInit} Headers needed to authorize the call.
-     */ 
-    function getHeaders() {
-      const headers = new Headers();
-      headers.append("Content-Type", "application/json");
-      headers.append(
-        "Authorization",
-        "Bearer INSERT-TOKEN-HERE"
-      );
-      return headers;
-    }
-
-    /**
-     * Contacts the LIFX API 
-     */ 
-    function setLightState(rgb) {
-      // Get the headers and build the PUT request to update all Lights
-    
-    }
-
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
